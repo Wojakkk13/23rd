@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 23rd Monthsary, My Bilog 💛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF6E6;
+    --cream-2:#FFEFD6;
+    --hotpink:#FF5D8F;
+    --hotpink-deep:#E8477C;
+    --sky:#3FC3DE;
+    --sun:#FFC93C;
+    --grape:#8C52FF;
+    --plum:#3B1F4D;
+    --plum-soft:#6B5476;
+    --white:#FFFDF9;
+    --shadow: 0 10px 30px rgba(59,31,77,0.15);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(140,82,255,0.12) 1.5px, transparent 1.5px),
+      var(--cream);
+    background-size: 26px 26px;
+    color:var(--plum);
+    font-family:'Nunito', sans-serif;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Fredoka', sans-serif;
+    font-weight:600;
+    margin:0;
+  }
+
+  .script{
+    font-family:'Caveat', cursive;
+  }
+
+  a{color:inherit;}
+
+  /* ---------- floating doodles ---------- */
+  .doodle{
+    position:absolute;
+    opacity:0.85;
+    animation: float 6s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .doodle.d2{animation-delay:1.2s; animation-duration:7s;}
+  .doodle.d3{animation-delay:2.1s; animation-duration:5.5s;}
+  .doodle.d4{animation-delay:0.6s; animation-duration:6.5s;}
+  .doodle.d5{animation-delay:1.8s; animation-duration:8s;}
+  @keyframes float{
+    0%,100%{transform:translateY(0) rotate(0deg);}
+    50%{transform:translateY(-16px) rotate(6deg);}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:6rem 1.5rem 4rem;
+    overflow:hidden;
+  }
+
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--hotpink-deep);
+    background:var(--white);
+    border:2px dashed var(--hotpink);
+    border-radius:999px;
+    padding:0.3rem 1.3rem;
+    transform:rotate(-3deg);
+    margin-bottom:1.5rem;
+    box-shadow:var(--shadow);
+  }
+
+  .hero h1{
+    font-size:clamp(2.4rem, 7vw, 5rem);
+    line-height:1.05;
+    color:var(--plum);
+  }
+  .hero h1 .accent{
+    color:var(--hotpink);
+    position:relative;
+    display:inline-block;
+  }
+  .hero h1 .names{
+    display:block;
+    margin-top:0.3rem;
+    background:linear-gradient(90deg, var(--hotpink), var(--grape) 55%, var(--sky));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .hero-sub{
+    margin-top:1.2rem;
+    font-size:clamp(1.05rem, 2.2vw, 1.3rem);
+    color:var(--plum-soft);
+    max-width:36rem;
+  }
+
+  .counter{
+    margin-top:2.4rem;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .counter .chip{
+    background:var(--white);
+    border-radius:20px;
+    padding:0.9rem 1.4rem;
+    box-shadow:var(--shadow);
+    min-width:110px;
+    transform:rotate(-1.5deg);
+  }
+  .counter .chip:nth-child(2){transform:rotate(1.5deg);}
+  .counter .chip .num{
+    font-family:'Fredoka', sans-serif;
+    font-size:1.9rem;
+    font-weight:700;
+    color:var(--hotpink-deep);
+    display:block;
+  }
+  .counter .chip .label{
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--plum-soft);
+    font-weight:700;
+  }
+
+  .scroll-cue{
+    margin-top:3.2rem;
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--plum-soft);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.3rem;
+  }
+  .scroll-cue svg{animation:bob 1.8s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+
+  section{
+    position:relative;
+    padding:5rem 1.5rem;
+    max-width:1000px;
+    margin:0 auto;
+  }
+
+  .section-head{
+    text-align:center;
+    margin-bottom:3.5rem;
+  }
+  .section-head .tag{
+    font-family:'Caveat', cursive;
+    color:var(--sky);
+    font-size:1.4rem;
+    display:block;
+    margin-bottom:0.2rem;
+  }
+  .section-head h2{
+    font-size:clamp(1.8rem, 4vw, 2.6rem);
+    color:var(--plum);
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{
+    position:relative;
+    padding-left:0;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:repeating-linear-gradient(180deg, var(--grape) 0 10px, transparent 10px 20px);
+    transform:translateX(-50%);
+  }
+  .t-item{
+    position:relative;
+    width:50%;
+    padding:0 3rem 3.5rem;
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .t-item.in{opacity:1; transform:translateY(0);}
+  .t-item:nth-child(odd){left:0; text-align:right;}
+  .t-item:nth-child(even){left:50%; text-align:left;}
+  .t-dot{
+    position:absolute;
+    top:0.4rem;
+    width:18px; height:18px;
+    background:var(--sun);
+    border:3px solid var(--white);
+    border-radius:50%;
+    box-shadow:0 0 0 3px var(--grape);
+  }
+  .t-item:nth-child(odd) .t-dot{right:-9px;}
+  .t-item:nth-child(even) .t-dot{left:-9px;}
+
+  .t-card{
+    display:inline-block;
+    background:var(--white);
+    border-radius:18px;
+    padding:1.4rem 1.6rem;
+    box-shadow:var(--shadow);
+    max-width:360px;
+    position:relative;
+  }
+  .t-item:nth-child(odd) .t-card{transform:rotate(-1deg);}
+  .t-item:nth-child(even) .t-card{transform:rotate(1deg);}
+  .t-date{
+    font-family:'Caveat', cursive;
+    font-size:1.1rem;
+    color:var(--hotpink-deep);
+    font-weight:700;
+  }
+  .t-card h3{
+    font-size:1.15rem;
+    margin:0.2rem 0 0.5rem;
+    color:var(--plum);
+  }
+  .t-card p{
+    margin:0;
+    font-size:0.95rem;
+    color:var(--plum-soft);
+    line-height:1.5;
+  }
+  .tape{
+    position:absolute;
+    top:-10px;
+    width:56px; height:20px;
+    background:var(--sun);
+    opacity:0.75;
+    left:50%;
+    transform:translateX(-50%) rotate(-4deg);
+  }
+
+  @media (max-width:720px){
+    .timeline::before{left:18px;}
+    .t-item, .t-item:nth-child(even){width:100%; left:0; text-align:left; padding-left:3rem; padding-right:0.5rem;}
+    .t-item:nth-child(odd) .t-dot, .t-item:nth-child(even) .t-dot{left:9px;}
+    .t-item:nth-child(odd) .t-card, .t-item:nth-child(even) .t-card{transform:rotate(-1deg);}
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:2.2rem;
+  }
+  .polaroid{
+    background:var(--white);
+    padding:0.8rem 0.8rem 1.4rem;
+    border-radius:6px;
+    box-shadow:var(--shadow);
+    transition:transform 0.25s ease;
+    opacity:0;
+    transform:translateY(24px) rotate(0deg);
+    transition:opacity 0.6s ease, transform 0.3s ease;
+  }
+  .polaroid.in{opacity:1;}
+  .polaroid:nth-child(1){transform:rotate(-4deg);}
+  .polaroid:nth-child(2){transform:rotate(3deg);}
+  .polaroid:nth-child(3){transform:rotate(-2deg);}
+  .polaroid:nth-child(4){transform:rotate(4deg);}
+  .polaroid:nth-child(5){transform:rotate(-3deg);}
+  .polaroid:hover{transform:rotate(0deg) scale(1.05); z-index:2;}
+  .polaroid .scene{
+    aspect-ratio:1/1;
+    border-radius:3px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .polaroid figcaption{
+    font-family:'Caveat', cursive;
+    text-align:center;
+    font-size:1.25rem;
+    margin-top:0.7rem;
+    color:var(--plum);
+  }
+
+  /* ---------- LETTER ---------- */
+  .letter-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1.5rem;
+  }
+  .envelope{
+    width:min(340px, 85vw);
+    aspect-ratio:3/2;
+    position:relative;
+    cursor:pointer;
+    background:var(--hotpink);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+    perspective:1000px;
+  }
+  .envelope .body{
+    position:absolute; inset:0;
+    background:var(--white);
+    border-radius:10px;
+    border:2px solid var(--hotpink);
+  }
+  .envelope .flap{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:52%;
+    background:var(--hotpink-deep);
+    clip-path:polygon(0 0, 100% 0, 50% 85%);
+    transform-origin:top;
+    transition:transform 0.6s ease;
+    border-radius:10px 10px 0 0;
+    z-index:3;
+  }
+  .envelope.open .flap{transform:rotateX(180deg);}
+  .envelope .seal{
+    position:absolute;
+    top:38%; left:50%;
+    transform:translate(-50%,-50%);
+    width:46px; height:46px;
+    background:var(--sun);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+    z-index:4;
+    font-size:1.4rem;
+  }
+  .envelope.open .seal{display:none;}
+  .envelope .hint{
+    position:absolute;
+    bottom:12px; left:0; right:0;
+    text-align:center;
+    font-family:'Caveat', cursive;
+    color:var(--plum-soft);
+    font-size:1.1rem;
+    z-index:1;
+  }
+
+  .letter-paper{
+    max-width:520px;
+    width:100%;
+    background:var(--white);
+    border-radius:14px;
+    box-shadow:var(--shadow);
+    padding:2.2rem 2rem;
+    text-align:left;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(-10px);
+    transition:max-height 0.7s ease, opacity 0.6s ease, transform 0.6s ease, padding 0.5s ease, margin 0.5s ease;
+  }
+  .letter-paper.show{
+    max-height:900px;
+    opacity:1;
+    transform:translateY(0);
+  }
+  .letter-paper p{
+    font-family:'Caveat', cursive;
+    font-size:1.35rem;
+    line-height:1.65;
+    color:var(--plum);
+    margin:0 0 1rem;
+  }
+  .letter-paper .sign{
+    text-align:right;
+    font-size:1.6rem;
+    color:var(--hotpink-deep);
+  }
+
+  footer{
+    text-align:center;
+    padding:3rem 1.5rem 4rem;
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--plum-soft);
+  }
+  footer .hearts{margin-top:0.4rem; font-size:1.4rem;}
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;
+  }
+
+  button:focus-visible, .envelope:focus-visible{
+    outline:3px solid var(--grape);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<section class="hero" aria-label="Intro">
+  <svg class="doodle d1" style="top:8%; left:8%;" width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4 6 4c2.3 0 4 1.4 6 4 2-2.6 3.7-4 6-4 4 0 5.6 4 4 7.7C19.5 16.4 12 21 12 21z" fill="#FF5D8F"/></svg>
+  <svg class="doodle d2" style="top:14%; right:10%;" width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="#FFC93C"/></svg>
+  <svg class="doodle d3" style="bottom:20%; left:12%;" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="#3FC3DE"/></svg>
+  <svg class="doodle d4" style="bottom:14%; right:14%;" width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4 6 4c2.3 0 4 1.4 6 4 2-2.6 3.7-4 6-4 4 0 5.6 4 4 7.7C19.5 16.4 12 21 12 21z" fill="#8C52FF"/></svg>
+  <svg class="doodle d5" style="top:40%; left:4%;" width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#FFC93C"/></svg>
+
+  <span class="eyebrow">est. 09 · 22 · 2024</span>
+  <h1>
+    Happy 23rd Monthsary,
+    <span class="names">My Bilog</span>
+  </h1>
+  <p class="hero-sub">Twenty-three months of choosing you, over and over, on ordinary Tuesdays and everything in between. A little gift for my pretty bebe! go on, scroll.</p>
+
+  <div class="counter" id="counter" aria-live="polite">
+    <div class="chip"><span class="num" id="num-months">23</span><span class="label">months</span></div>
+    <div class="chip"><span class="num" id="num-days">—</span><span class="label">total days</span></div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>keep going, baby</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="#6B5476" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<section aria-label="Our timeline">
+  <div class="section-head">
+    <span class="tag">chapter by chapter</span>
+    <h2>Our Little Story So Far</h2>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <div class="t-item">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="tape"></span>
+        <span class="t-date">Sept 22, 2024</span>
+        <h3>Hello, Baks</h3>
+        <p>The day the "just talking" finally got a name. One of us worked up the nerve (syempre ikaw na yun), the other said yes, and that was that — day one of us.</p>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="tape"></span>
+        <span class="t-date">not long after</span>
+        <h3>The First Real Date</h3>
+        <p>Rehearsed lines, forgotten the second I saw you. You were standing like a rock because of the anxious feeling in the corner of Cubao. Somewhere between the small talk and the nervous laughing, I already knew I wanted a second one.</p>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="tape"></span>
+        <span class="t-date">a few weeks in</span>
+        <h3>The First "I Miss You"</h3>
+        <p>One day apart and it already felt like too long. That's when I knew this wasn't just fun you'd become a habit I never wanted to break.</p>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="tape"></span>
+        <span class="t-date">somewhere in between</span>
+        <h3>Surviving Our First Fight</h3>
+        <p>We disagreed, we cooled down, we came back. Nobody "won", we just both showed up for us. That's the part I'm proudest of, still.</p>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <span class="t-dot"></span>
+      <div class="t-card">
+        <span class="tape"></span>
+        <span class="t-date">today</span>
+        <h3>23 Months and Counting</h3>
+        <p>Still here, still us, still picking you. One monthsary, one ordinary day, one bad joke at a time. Here's to the 24th.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Gallery Container */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  /* 3D Perspective Parent */
+  .polaroid {
+    margin: 0;
+    width: 200px;
+    height: 250px;
+    perspective: 1000px; /* Enables 3D flipping space */
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), z-index 0s 0.2s;
+    z-index: 1;
+  }
+
+  /* Inner Flipper Container */
+  .polaroid-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+
+  /* Common styling for Front and Back faces */
+  .polaroid-front, 
+  .polaroid-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    backface-visibility: hidden; /* Hides face when flipped away */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- FRONT SIDE --- */
+  .polaroid-front .scene {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+  }
+
+  .polaroid-front figcaption {
+    margin-top: auto;
+    font-size: 0.82rem;
+    color: #444;
+    font-family: sans-serif;
+    line-height: 1.2;
+  }
+
+  /* --- BACK SIDE --- */
+  .polaroid-back {
+    transform: rotateY(180deg);
+  }
+
+  .polaroid-back .photo-frame {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #f0f0f0;
+  }
+
+  /* Image styling for the back */
+  .polaroid-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .polaroid-back figcaption {
+    margin-top: auto;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #222;
+    font-family: sans-serif;
+  }
+
+  /* --- EXPANDED & FLIPPED STATE --- */
+  .polaroid.flipped {
+    transform: scale(1.4); /* Expands the size */
+    z-index: 100; /* Brings above all other elements */
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), z-index 0s;
+  }
+
+  .polaroid.flipped .polaroid-inner {
+    transform: rotateY(180deg); /* Performs 3D flip */
+  }
+
+  .polaroid.flipped .polaroid-back {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+  }
+</style>
+
+<section aria-label="Photo gallery">
+  <div class="section-head">
+    <span class="tag">imagined, but so real to me</span>
+    <h2>Snapshots (In My Head)</h2>
+  </div>
+
+  <div class="gallery" id="gallery">
+
+    <!-- Item 1 -->
+    <figure class="polaroid">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#FFE1EC,#FFC1D6);">
+            <svg width="70" height="70" viewBox="0 0 24 24" fill="none"><path d="M21 6.5a4 4 0 00-6.6-3L12 5l-2.4-1.5a4 4 0 00-6.6 3c0 4 4.5 7 9 10.5 4.5-3.5 9-6.5 9-10z" fill="#FF5D8F"/></svg>
+          </div>
+          <figcaption>start of our story</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/first.png" alt="Back Image 1">
+          </div>
+          <figcaption>Iyot q</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 2 -->
+    <figure class="polaroid">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#FFF1D6,#FFDDA1);">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M4 9h13a3 3 0 010 6H4V9z" stroke="#B98123" stroke-width="1.6"/><path d="M4 9v6M17 11v2" stroke="#B98123" stroke-width="1.6" stroke-linecap="round"/><path d="M7 4c-1 1-1 2 0 3M11 4c-1 1-1 2 0 3" stroke="#B98123" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <figcaption>the first date</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/date.jpg" alt="Back Image 2">
+          </div>
+          <figcaption>eh kinilig</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 3 -->
+    <figure class="polaroid">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#D9F3F9,#B7E7F2);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0116 0" stroke="#2795AC" stroke-width="1.6" stroke-linecap="round"/><path d="M4 12v2m4-2v3m4-3v2m4-3v3m4-3v2" stroke="#2795AC" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <figcaption>1st Photobooth</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/Photobooth1.jpg" alt="Back Image 3">
+          </div>
+          <figcaption>cheek kiss muna raw</figcaption>
+        </div>
+      </div>
+    </figure>
+
+<!-- Item 4 -->
+    <figure class="polaroid" style="transform: rotate(-2deg);">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#EDE1FF,#D8C4FF);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6B3FCF" stroke-width="1.6"/><path d="M9 10c0-1 3-1 3 0M9 14c1 1 5 1 6 0" stroke="#6B3FCF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <figcaption>2nd Photobooth</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/Photobooth2.jpg" alt="Back Image 4">
+          </div>
+          <figcaption>Ayun 'di na nakapagpigil</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 5 -->
+    <figure class="polaroid" style="transform: rotate(3deg);">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#FFE1EC,#D8C4FF);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none">
+              <path d="M8 20s-5.6-3.4-7.4-6.9C-0.6 10 0.6 6.8 3.8 6.8c1.7 0 3 1 4.2 2.6C9.2 7.8 10.5 6.8 12.2 6.8c3.2 0 4.4 3.2 3.2 6.3C13.6 16.6 8 20 8 20z" fill="#FF5D8F" transform="translate(0,0) scale(0.9)"/>
+              <path d="M15 18s-4.6-2.8-6-5.6c-1-2 0-4.6 2.6-4.6 1.4 0 2.4.8 3.4 2.1.8-1.3 1.9-2.1 3.3-2.1 2.6 0 3.6 2.6 2.6 4.6C19.6 15.2 15 18 15 18z" fill="#8C52FF" transform="translate(3,0)"/>
+            </svg>
+          </div>
+          <figcaption>shy didi</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/shy.jpg" alt="Back Image 5">
+          </div>
+          <figcaption>i lob u po</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 6 -->
+    <figure class="polaroid" style="transform: rotate(-2.5deg);">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#DCEBFF,#B9D6FF);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none"><path d="M20 13.5A8 8 0 1110.5 4a6.5 6.5 0 009.5 9.5z" fill="#3C6FD1"/><circle cx="17" cy="6" r="1" fill="#3C6FD1"/><circle cx="19.5" cy="9" r="0.8" fill="#3C6FD1"/></svg>
+          </div>
+          <figcaption>3rd Photobooth</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/Photobooth3.jpg" alt="Back Image 6">
+          </div>
+          <figcaption>SARAP</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 7 -->
+    <figure class="polaroid" style="transform: rotate(2deg);">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#FFE8D6,#FFCBA1);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none"><path d="M9 18V6l10-2v12" stroke="#C1712F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="#C1712F" stroke-width="1.6"/><circle cx="17" cy="16" r="2" stroke="#C1712F" stroke-width="1.6"/></svg>
+          </div>
+          <figcaption>my talented gf</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/harana.png" alt="Back Image 7">
+          </div>
+          <figcaption>so pretty</figcaption>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Item 8 -->
+    <figure class="polaroid" style="transform: rotate(-1.5deg);">
+      <div class="polaroid-inner">
+        <div class="polaroid-front">
+          <div class="scene" style="background:linear-gradient(135deg,#FFF3C4,#FFE38F);">
+            <svg width="66" height="66" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#D19A1E"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="#D19A1E" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <figcaption>In the future!</figcaption>
+        </div>
+        <div class="polaroid-back">
+          <div class="photo-frame">
+            <img src="images/bride.jpg" alt="Back Image 8">
+          </div>
+          <figcaption>Soon to be my Bride</figcaption>
+        </div>
+      </div>
+    </figure>
+
+  </div>
+</section>
+
+<script>
+  document.getElementById('gallery').addEventListener('click', (e) => {
+    const card = e.target.closest('.polaroid');
+    if (!card) return;
+
+    // Retract any other card that is currently flipped
+    document.querySelectorAll('.polaroid.flipped').forEach((openCard) => {
+      if (openCard !== card) {
+        openCard.classList.remove('flipped');
+      }
+    });
+
+    // Toggle flip and expand state on the clicked card
+    card.classList.toggle('flipped');
+  });
+</script>
+
+<section aria-label="Love letter">
+  <div class="section-head">
+    <span class="tag">one more thing</span>
+    <h2>Open When You Miss Me</h2>
+  </div>
+
+  <div class="letter-wrap">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-expanded="false" aria-controls="letter">
+      <div class="body"></div>
+      <div class="flap"></div>
+      <div class="seal">💌</div>
+      <span class="hint">tap to open</span>
+    </div>
+
+    <article class="letter-paper" id="letter">
+      <p>Bilog,</p>
+      <p>Twenty-three months. Somehow that number still surprises me, because most days it just feels like "us", like something that was always going to happen, sooner or later, whether we planned it or not.</p>
+      <p>I don't have some big grand thing to give you today, just this: a talent I made instead of buying you a gift for now that you'd have to find room for. It's small, like most of what I give you, but it's built out of every version of you I've fallen for since September 22nd — the nervous one on our first date, the one who fights fair, the one who still laughs at my worst jokes like they're new every time.</p>
+      <p>Thank you for staying easy to love, even on the days I probably wasn't. Here's to the 24th, and the one after that, and however many it takes.</p>
+      <p class="sign">— Didi</p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <p>made with love by Didi for my Bilog, on our 23rd monthsary.</p>
+</footer>
+
+<script>
+  // live counter
+  (function(){
+    var start = new Date(2024, 8, 22); // month is 0-indexed: 8 = September
+    var now = new Date();
+    var msPerDay = 1000*60*60*24;
+    var totalDays = Math.floor((now - start) / msPerDay);
+
+    var months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+    if (now.getDate() < start.getDate()) months -= 1;
+
+    document.getElementById('num-months').textContent = months;
+    document.getElementById('num-days').textContent = totalDays.toLocaleString();
+  })();
+
+  // scroll reveal
+  (function(){
+    var items = document.querySelectorAll('.t-item, .polaroid');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.2});
+    items.forEach(function(el){ obs.observe(el); });
+  })();
+
+  // envelope open
+  (function(){
+    var envelope = document.getElementById('envelope');
+    var letter = document.getElementById('letter');
+    var hint = envelope.querySelector('.hint');
+
+    function toggle(){
+      var isOpen = envelope.classList.toggle('open');
+      letter.classList.toggle('show', isOpen);
+      envelope.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      hint.textContent = isOpen ? 'tap to close' : 'tap to open';
+      if (isOpen) {
+        setTimeout(function(){
+          letter.scrollIntoView({behavior:'smooth', block:'nearest'});
+        }, 300);
+      }
+    }
+
+    envelope.addEventListener('click', toggle);
+    envelope.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        toggle();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
