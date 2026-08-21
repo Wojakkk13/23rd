@@ -601,9 +601,18 @@
     font-family: sans-serif;
   }
 
+  /* Default per-card tilts (moved out of inline styles so they can't
+     override the .flipped expand rule below — inline styles always
+     beat stylesheet rules, even highly specific ones) */
+  .gallery .polaroid:nth-child(4){ transform: rotate(-2deg); }
+  .gallery .polaroid:nth-child(5){ transform: rotate(3deg); }
+  .gallery .polaroid:nth-child(6){ transform: rotate(-2.5deg); }
+  .gallery .polaroid:nth-child(7){ transform: rotate(2deg); }
+  .gallery .polaroid:nth-child(8){ transform: rotate(-1.5deg); }
+
   /* --- EXPANDED & FLIPPED STATE --- */
   .polaroid.flipped {
-    transform: scale(1.4); /* Expands the size */
+    transform: scale(1.4) !important; /* Expands the size — !important so it always wins, even over the tilt rules above */
     z-index: 100; /* Brings above all other elements */
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), z-index 0s;
   }
@@ -680,7 +689,7 @@
     </figure>
 
 <!-- Item 4 -->
-    <figure class="polaroid" style="transform: rotate(-2deg);">
+    <figure class="polaroid">
       <div class="polaroid-inner">
         <div class="polaroid-front">
           <div class="scene" style="background:linear-gradient(135deg,#EDE1FF,#D8C4FF);">
@@ -698,7 +707,7 @@
     </figure>
 
     <!-- Item 5 -->
-    <figure class="polaroid" style="transform: rotate(3deg);">
+    <figure class="polaroid">
       <div class="polaroid-inner">
         <div class="polaroid-front">
           <div class="scene" style="background:linear-gradient(135deg,#FFE1EC,#D8C4FF);">
@@ -719,7 +728,7 @@
     </figure>
 
     <!-- Item 6 -->
-    <figure class="polaroid" style="transform: rotate(-2.5deg);">
+    <figure class="polaroid">
       <div class="polaroid-inner">
         <div class="polaroid-front">
           <div class="scene" style="background:linear-gradient(135deg,#DCEBFF,#B9D6FF);">
@@ -737,7 +746,7 @@
     </figure>
 
     <!-- Item 7 -->
-    <figure class="polaroid" style="transform: rotate(2deg);">
+    <figure class="polaroid">
       <div class="polaroid-inner">
         <div class="polaroid-front">
           <div class="scene" style="background:linear-gradient(135deg,#FFE8D6,#FFCBA1);">
@@ -755,7 +764,7 @@
     </figure>
 
     <!-- Item 8 -->
-    <figure class="polaroid" style="transform: rotate(-1.5deg);">
+    <figure class="polaroid">
       <div class="polaroid-inner">
         <div class="polaroid-front">
           <div class="scene" style="background:linear-gradient(135deg,#FFF3C4,#FFE38F);">
